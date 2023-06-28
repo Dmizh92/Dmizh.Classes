@@ -1,7 +1,8 @@
 ﻿
-Person tom = new Person();
+Person Dima = new Employee("Dima", 15, "Spec");
 
-tom.Print();
+Dima.Print();
+
 
 class Person
 {
@@ -22,8 +23,23 @@ class Person
         name = n;
         age = a;
     }
-    public void Print()
+    public virtual void Print()
     {
         Console.WriteLine($"Имя: {name}  Возраст: {age}");
+    }
+}
+
+class Employee : Person
+{
+    public string job = "Undefined";
+    public Employee(string n, int a, string j)
+    {
+        name = n;
+        age = a;
+        job = j;
+    }
+    public override void Print()
+    {
+        Console.WriteLine($"Имя: {name}  Возраст: {age} Профессия: {job}");
     }
 }
