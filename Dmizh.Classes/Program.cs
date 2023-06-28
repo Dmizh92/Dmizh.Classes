@@ -27,6 +27,10 @@ class Person
     {
         Console.WriteLine($"Имя: {name}  Возраст: {age}");
     }
+    public void Rename (string newName)
+    {
+        name = newName;
+    }
 }
 
 class Employee : Person
