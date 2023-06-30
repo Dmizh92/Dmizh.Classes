@@ -1,5 +1,5 @@
 ﻿
-Person Dima = new Employee("Dima", 15, "Spec", 1234567);
+Person Dima = new Employee("Dima", 15, "Spec", 1234567, 11223344);
 
 Dima.Print();
 
@@ -37,16 +37,19 @@ class Employee : Person
 {
     public string job = "Undefined";
     public int accountNumber;
+    public int assuranceNumber;
 
-    public Employee(string n, int a, string j, int ac)
+
+    public Employee(string n, int a, string j, int ac, int an)
     {
         name = n;
         age = a;
         job = j;
         accountNumber = ac;
+        assuranceNumber = an;
     }
     public override void Print()
     {
-        Console.WriteLine($"Имя: {name}  Возраст: {age} Профессия: {job} Номер счета: {accountNumber}");
+        Console.WriteLine($"Имя: {name}  Возраст: {age} Профессия: {job} Номер счета: {accountNumber} Номер страховки: {assuranceNumber}");
     }
 }
